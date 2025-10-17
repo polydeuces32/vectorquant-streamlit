@@ -364,38 +364,38 @@ def update_price_data():
 # Update price data
 update_price_data()
 
-    # Live BTC/USDT price chart
-    st.subheader("📈 Live BTC/USDT Price Feed")
+# Live BTC/USDT price chart
+st.subheader("📈 Live BTC/USDT Price Feed")
+
+if not st.session_state.price_data.empty:
+    fig_price = px.line(
+        st.session_state.price_data, 
+        x="Time", 
+        y="Price", 
+        title="Real-time BTC/USDT Price",
+        labels={"Price": "Price (USDT)", "Time": "Time"}
+    )
     
-    if not st.session_state.price_data.empty:
-        fig_price = px.line(
-            st.session_state.price_data, 
-            x="Time", 
-            y="Price", 
-            title="Real-time BTC/USDT Price",
-            labels={"Price": "Price (USDT)", "Time": "Time"}
+    # Customize the chart
+    fig_price.update_layout(
+        xaxis_title="Time",
+        yaxis_title="Price (USDT)",
+        hovermode='x unified',
+        showlegend=False
+    )
+    
+    # Add moving average
+    if len(st.session_state.price_data) > 10:
+        st.session_state.price_data['MA'] = st.session_state.price_data['Price'].rolling(window=10).mean()
+        fig_price.add_scatter(
+            x=st.session_state.price_data['Time'], 
+            y=st.session_state.price_data['MA'], 
+            mode='lines', 
+            name='10-period MA',
+            line=dict(color='orange', width=2)
         )
-        
-        # Customize the chart
-        fig_price.update_layout(
-            xaxis_title="Time",
-            yaxis_title="Price (USDT)",
-            hovermode='x unified',
-            showlegend=False
-        )
-        
-        # Add moving average
-        if len(st.session_state.price_data) > 10:
-            st.session_state.price_data['MA'] = st.session_state.price_data['Price'].rolling(window=10).mean()
-            fig_price.add_scatter(
-                x=st.session_state.price_data['Time'], 
-                y=st.session_state.price_data['MA'], 
-                mode='lines', 
-                name='10-period MA',
-                line=dict(color='orange', width=2)
-            )
-        
-        st.plotly_chart(fig_price, use_container_width=True)
+    
+    st.plotly_chart(fig_price, use_container_width=True)
 
 # TAB 2: Performance Analytics
 with tab2:
