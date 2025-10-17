@@ -101,19 +101,19 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.markdown('<h1 class="main-header">🚀 VectorQuant Live Crypto Dashboard</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-header">VectorQuant Live Crypto Dashboard</h1>', unsafe_allow_html=True)
 
 # Create tabs for professional dashboard
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "📊 Trading Overview", 
-    "📈 Performance Analytics", 
-    "💰 Multi-Crypto Prices", 
-    "🔧 System Health", 
-    "🚨 Alerts & Monitoring"
+    "Trading Overview", 
+    "Performance Analytics", 
+    "Multi-Crypto Prices", 
+    "System Health", 
+    "Alerts & Monitoring"
 ])
 
 # Sidebar controls
-st.sidebar.header("🎛️ Control Panel")
+st.sidebar.header("Control Panel")
 
 # Trading mode selection
 mode = st.sidebar.radio(
@@ -140,7 +140,7 @@ temperature = st.sidebar.slider(
 auto_refresh = st.sidebar.checkbox("Auto Refresh", True, help="Automatically refresh data every second")
 
 # Manual refresh button
-if st.sidebar.button("🔄 Manual Refresh"):
+if st.sidebar.button("Manual Refresh"):
     st.rerun()
 
 # Simulate comprehensive trading metrics
@@ -189,7 +189,7 @@ data = get_simulated_metrics()
 
 # TAB 1: Trading Overview
 with tab1:
-    st.subheader("📊 Live Trading Metrics")
+    st.subheader("Live Trading Metrics")
     
     # Trading mode display with styling
     mode_class = "trading-mode-live" if data["mode"] == "Live" else "trading-mode-shadow"
@@ -214,7 +214,7 @@ with tab1:
     st.metric("Cumulative PnL (USDT)", f"{data['pnl']:.2f}")
     
     # Performance badges
-    st.subheader("🎯 Performance Indicators")
+    st.subheader("Performance Indicators")
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
@@ -259,24 +259,24 @@ with tab1:
 
 # TAB 2: Performance Analytics
 with tab2:
-    st.subheader("📈 Performance Analytics")
+    st.subheader("Performance Analytics")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("📊 Time-based PnL")
+        st.subheader("Time-based PnL")
         st.metric("Daily PnL", f"${data['daily_pnl']:.2f}")
         st.metric("Weekly PnL", f"${data['weekly_pnl']:.2f}")
         st.metric("Monthly PnL", f"${data['monthly_pnl']:.2f}")
     
     with col2:
-        st.subheader("📈 Risk Metrics")
+        st.subheader("Risk Metrics")
         st.metric("Sharpe Ratio", f"{data['sharpe_ratio']:.2f}")
         st.metric("Max Drawdown", f"{data['max_drawdown']:.1%}")
         st.metric("Win Rate", f"{data['win_rate']:.1%}")
     
     # Performance chart
-    st.subheader("📊 Performance Over Time")
+    st.subheader("Performance Over Time")
     
     # Create sample performance data
     dates = pd.date_range(start='2024-01-01', end='2024-10-16', freq='D')
@@ -292,7 +292,7 @@ with tab2:
 
 # TAB 3: Multi-Crypto Prices
 with tab3:
-    st.subheader("💰 Multi-Crypto Price Dashboard")
+    st.subheader("Multi-Crypto Price Dashboard")
     
     col1, col2, col3 = st.columns(3)
     
@@ -334,24 +334,24 @@ with tab3:
 
 # TAB 4: System Health
 with tab4:
-    st.subheader("🔧 System Health Monitoring")
+    st.subheader("System Health Monitoring")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("💻 System Resources")
+        st.subheader("System Resources")
         st.metric("CPU Usage", f"{data['cpu_usage']:.1%}")
         st.metric("Memory Usage", f"{data['memory_usage']:.1%}")
         st.metric("System Load", f"{data['system_load']:.2f}")
     
     with col2:
-        st.subheader("🌐 Network & Performance")
+        st.subheader("Network & Performance")
         st.metric("Network Latency", f"{data['network_latency']:.1f}ms")
         st.metric("Error Rate", f"{data['error_rate']:.2%}")
         st.metric("Uptime", f"{data['uptime_hours']:.1f}h")
     
     # System health gauges
-    st.subheader("📊 System Health Gauges")
+    st.subheader("System Health Gauges")
     
     col1, col2, col3 = st.columns(3)
     
@@ -426,7 +426,7 @@ with tab4:
 
 # TAB 5: Alerts & Monitoring
 with tab5:
-    st.subheader("🚨 Alerts & Monitoring")
+    st.subheader("Alerts & Monitoring")
     
     # Generate alerts based on current state
     alerts = []
@@ -467,16 +467,16 @@ with tab5:
             message = alert.get('message', 'No message')
             
             if severity == 'high':
-                st.error(f"🚨 **{alert_type.upper()}**: {message}")
+                st.error(f"**{alert_type.upper()}**: {message}")
             elif severity == 'medium':
-                st.warning(f"⚠️ **{alert_type.upper()}**: {message}")
+                st.warning(f"**{alert_type.upper()}**: {message}")
             else:
-                st.info(f"ℹ️ **{alert_type.upper()}**: {message}")
+                st.info(f"**{alert_type.upper()}**: {message}")
     else:
-        st.success("✅ No active alerts - All systems operating normally")
+        st.success("No active alerts - All systems operating normally")
     
     # Alert configuration
-    st.subheader("⚙️ Alert Configuration")
+    st.subheader("Alert Configuration")
     
     col1, col2 = st.columns(2)
     
@@ -491,7 +491,7 @@ with tab5:
         st.checkbox("Market Volatility Alerts", value=False)
 
 # Temperature gauge in sidebar
-st.sidebar.subheader("🌡️ Model Temperature")
+st.sidebar.subheader("Model Temperature")
 
 # Create circular gauge
 gauge = go.Figure(
@@ -535,20 +535,20 @@ else:
 st.sidebar.info(temp_interpretation)
 
 # System status in sidebar
-st.sidebar.subheader("🔧 System Status")
-st.sidebar.success("✅ Demo Mode Active")
+st.sidebar.subheader("System Status")
+st.sidebar.success("Demo Mode Active")
 
 # Auto refresh status
 if auto_refresh:
-    st.sidebar.info("🔄 Auto-refresh enabled")
+    st.sidebar.info("Auto-refresh enabled")
 else:
-    st.sidebar.info("⏸️ Auto-refresh disabled")
+    st.sidebar.info("Auto-refresh disabled")
 
 # Footer
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: #666; font-family: Inter;'>"
-    "🚀 VectorQuant Live Dashboard | Professional Trading Platform"
+    "VectorQuant Live Dashboard | Professional Trading Platform"
     "</div>", 
     unsafe_allow_html=True
 )
