@@ -1,59 +1,59 @@
-# 🚀 VectorQuant Live Crypto Dashboard
+# VectorQuant Live Crypto Dashboard
 
 A professional, real-time cryptocurrency trading dashboard built with Streamlit and FastAPI. Features live price tracking, performance analytics, system health monitoring, and intelligent alert systems.
 
-## ✨ Features
+## Features
 
-### 📊 **Real-time Trading Metrics**
+### Real-time Trading Metrics
 - Live PnL tracking with color-coded indicators
 - Order execution latency monitoring
 - Orders per second analytics
 - Active position tracking
 - Risk limit management
 
-### 💰 **Multi-Crypto Price Tracking**
+### Multi-Crypto Price Tracking
 - **BTC/USDT**: Real-time Bitcoin price with 24h charts
 - **ETH/USDT**: Ethereum price tracking with volatility analysis
 - **SOL/USDT**: Solana price monitoring with trend indicators
 - Interactive Plotly charts with zoom and pan capabilities
 
-### 📈 **Performance Analytics**
+### Performance Analytics
 - Sharpe ratio calculations
 - Maximum drawdown analysis
 - Win rate statistics
 - Time-based PnL (Daily, Weekly, Monthly)
 - Cumulative performance charts
 
-### 🔧 **System Health Monitoring**
+### System Health Monitoring
 - CPU usage with circular gauges
 - Memory consumption tracking
 - Network latency monitoring
 - Error rate analysis
 - System uptime tracking
 
-### 🚨 **Intelligent Alert System**
+### Intelligent Alert System
 - High latency alerts
 - Error rate warnings
 - Loss threshold notifications
 - System health alerts
 - Configurable alert thresholds
 
-### 🎛️ **Interactive Controls**
+### Interactive Controls
 - Trading mode switching (Shadow/Live)
 - Dynamic risk limit adjustments
 - Model temperature control with visual gauge
 - Real-time parameter updates
 
-## 🎨 **Professional UI/UX**
+## Professional UI/UX
 - Modern gradient styling with Inter font
 - Responsive design for all devices
 - Color-coded performance badges
 - Smooth animations and transitions
 - Professional trading platform aesthetics
 
-## 🚀 **Quick Start**
+## Quick Start
 
-### **Local Development**
+### Local Development
 ```bash
 # Clone the repository
 git clone https://github.com/polydeuces32/vectorquant-streamlit.git
@@ -70,17 +70,17 @@ pip install -r requirements.txt
 streamlit run streamlit_app_deploy.py
 ```
 
-### **One-Command Start**
+### One-Command Start
 ```bash
 # Start both backend and frontend
 ./start_dashboard.sh
 ```
 
-## 🌐 **Live Demo**
+## Live Demo
 
 **Streamlit Cloud**: [https://vectorquant-crypto-dashboard.streamlit.app](https://vectorquant-crypto-dashboard.streamlit.app)
 
-## 📁 **Project Structure**
+## Project Structure
 
 ```
 vectorquant-streamlit/
@@ -95,7 +95,7 @@ vectorquant-streamlit/
 └── README.md                    # This file
 ```
 
-## 🔧 **Technical Stack**
+## Technical Stack
 
 - **Frontend**: Streamlit, Plotly, Pandas
 - **Backend**: FastAPI, Uvicorn
@@ -103,7 +103,7 @@ vectorquant-streamlit/
 - **Styling**: Custom CSS with gradients and animations
 - **Deployment**: Streamlit Cloud, Docker-ready
 
-## 📊 **Data Simulation**
+## Data Simulation
 
 The dashboard uses sophisticated simulation algorithms to provide realistic trading data:
 - **Price Fluctuations**: Market-like volatility patterns
@@ -111,7 +111,7 @@ The dashboard uses sophisticated simulation algorithms to provide realistic trad
 - **System Metrics**: CPU, memory, and network simulation
 - **Alert Generation**: Intelligent risk detection
 
-## 🎯 **Use Cases**
+## Use Cases
 
 - **Trading Demonstrations**: Showcase trading strategies and performance
 - **Client Presentations**: Professional trading platform demos
@@ -119,37 +119,37 @@ The dashboard uses sophisticated simulation algorithms to provide realistic trad
 - **Learning Tool**: Understanding trading metrics and risk management
 - **Prototype Development**: Foundation for real trading applications
 
-## 🚀 **Deployment Options**
+## Deployment Options
 
-### **Streamlit Cloud** (Recommended)
-- ✅ Free forever
-- ✅ Automatic HTTPS
-- ✅ Custom domain support
-- ✅ Zero server management
+### Streamlit Cloud (Recommended)
+- Free forever
+- Automatic HTTPS
+- Custom domain support
+- Zero server management
 
-### **Other Platforms**
+### Other Platforms
 - Heroku
 - Railway
 - DigitalOcean App Platform
 - AWS/GCP/Azure
 
-## 📈 **Performance**
+## Performance
 
-- ⚡ **Real-time Updates**: 1-second refresh rate
-- 📱 **Responsive Design**: Works on all devices
-- 🎨 **Smooth Animations**: 60fps transitions
-- 💾 **Lightweight**: Minimal resource usage
-- 🔄 **Auto-refresh**: Continuous data updates
+- **Real-time Updates**: 1-second refresh rate
+- **Responsive Design**: Works on all devices
+- **Smooth Animations**: 60fps transitions
+- **Lightweight**: Minimal resource usage
+- **Auto-refresh**: Continuous data updates
 
-## 🤝 **Contributing**
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 **License**
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 👨‍💻 **Author**
+## Author
 
 **Giancarlo Vizhnay** ([@polydeuces32](https://github.com/polydeuces32))
 - Bitcoin Script Developer
@@ -158,4 +158,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**🎉 Ready to deploy? Your professional VectorQuant Live Crypto Dashboard is production-ready!**
+**Ready to deploy? Your professional VectorQuant Live Crypto Dashboard is production-ready!**
